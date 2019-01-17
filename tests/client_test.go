@@ -1,7 +1,6 @@
 package tests
 
 import (
-	"fmt"
 	"testing"
 
 	splunk "github.com/qjvtenkroode/go-splunk"
@@ -13,7 +12,6 @@ func TestClient(t *testing.T) {
 	if err != nil {
 		t.Errorf("Error creating Client: %s", err)
 	}
-	fmt.Println(sessionKey)
 	if sessionKey.Value == "" {
 		t.Error("SessionKey is empty!")
 	}
